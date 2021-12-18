@@ -3,7 +3,7 @@
 
     <div class="banner">
       <div class="container">
-        <h1 class="logo-font">自动化部署v1.0</h1>
+        <h1 class="logo-font">自动化部署v1.0.3</h1>
         <p>A place to share your knowledge.</p>
       </div>
     </div>
