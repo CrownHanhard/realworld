@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/",
+    "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\layouts",
+    "children": [
+      {
+        "path": "",
+        "name": "home",
+        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\home",
+        "_name": "_a14caa14"
+      },
+      {
+        "path": "/login",
+        "name": "login",
+        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_3c13fc32"
+      },
+      {
+        "path": "/register",
+        "name": "register",
+        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_3c13fc32"
+      },
+      {
+        "path": "/profile/:username",
+        "name": "profile",
+        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\profile",
+        "_name": "_602c8832"
+      },
+      {
+        "path": "/settings",
+        "name": "settings",
+        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\settings",
+        "_name": "_36a48eba"
+      },
+      {
+        "path": "/editor",
+        "name": "editor",
+        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\editor",
+        "_name": "_39dfadc4"
+      },
+      {
+        "path": "/article/:slug",
+        "name": "article",
+        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\article",
+        "_name": "_46f6cb7f"
+      }
+    ],
+    "_name": "_70226912"
+  }
+]
