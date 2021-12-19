@@ -55,7 +55,7 @@ export default {
         ...this.article,
         tagList:this.article.tagList.split(",")
       }
-      await createArticles(_data).then(()=>{
+      await createArticles({article:_data}).then(()=>{
         this.$router.push('/')
       })
    },

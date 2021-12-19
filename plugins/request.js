@@ -1,6 +1,6 @@
 import axios from 'axios'
 export const request=axios.create({
-    baseURL:'https://api.realworld.io'
+    baseURL:'http://realworld.api.fed.lagounews.com'
 })
 export default (context)=>{
     request.interceptors.request.use((config)=>{

@@ -20,7 +20,7 @@ export const getYourFeedArticles = params => {
 // 创建文章
 export const createArticles = data => {
     return request({
-        method: 'GET',
+        method: 'POST',
         url: '/api/articles',
         data
     })
