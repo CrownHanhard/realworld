@@ -85,12 +85,12 @@ const addComments = (slug, data) => {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.9.8@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.9.8@vue-loader/lib??vue-loader-options!./pages/editor/index.vue?vue&type=template&id=76631dea&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"editor-page"},[_vm._ssrNode("<div class=\"container page\" data-v-76631dea><div class=\"row\" data-v-76631dea><div class=\"col-md-10 offset-md-1 col-xs-12\" data-v-76631dea><form data-v-76631dea><fieldset data-v-76631dea><fieldset class=\"form-group\" data-v-76631dea><input placeholder=\"Article Title\" type=\"text\""+(_vm._ssrAttr("value",(_vm.article.title)))+" class=\"form-control form-control-lg\" data-v-76631dea></fieldset> <fieldset class=\"form-group\" data-v-76631dea><input placeholder=\"What's this article about?\" type=\"text\""+(_vm._ssrAttr("value",(_vm.article.description)))+" class=\"form-control\" data-v-76631dea></fieldset> <fieldset class=\"form-group\" data-v-76631dea><textarea placeholder=\"Write your article (in markdown)\" rows=\"8\" class=\"form-control\" data-v-76631dea>"+_vm._ssrEscape(_vm._s(_vm.article.body))+"</textarea></fieldset> <fieldset class=\"form-group\" data-v-76631dea><input placeholder=\"Enter tags separated by ,\" type=\"text\""+(_vm._ssrAttr("value",(_vm.article.tagList)))+" class=\"form-control\" data-v-76631dea> <div class=\"tag-list\" data-v-76631dea></div></fieldset> <button type=\"button\" class=\"btn btn-lg pull-xs-right btn-primary\" data-v-76631dea>\n              Publish Article\n            </button></fieldset></form></div></div></div>")])}
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.9.8@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.9.8@vue-loader/lib??vue-loader-options!./pages/editor/index.vue?vue&type=template&id=6ebd9c5f&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"editor-page"},[_vm._ssrNode("<div class=\"container page\" data-v-6ebd9c5f><div class=\"row\" data-v-6ebd9c5f><div class=\"col-md-10 offset-md-1 col-xs-12\" data-v-6ebd9c5f><form data-v-6ebd9c5f><fieldset data-v-6ebd9c5f><fieldset class=\"form-group\" data-v-6ebd9c5f><input placeholder=\"Article Title\" type=\"text\""+(_vm._ssrAttr("value",(_vm.article.title)))+" class=\"form-control form-control-lg\" data-v-6ebd9c5f></fieldset> <fieldset class=\"form-group\" data-v-6ebd9c5f><input placeholder=\"What's this article about?\" type=\"text\""+(_vm._ssrAttr("value",(_vm.article.description)))+" class=\"form-control\" data-v-6ebd9c5f></fieldset> <fieldset class=\"form-group\" data-v-6ebd9c5f><textarea placeholder=\"Write your article (in markdown)\" rows=\"8\" class=\"form-control\" data-v-6ebd9c5f>"+_vm._ssrEscape(_vm._s(_vm.article.body))+"</textarea></fieldset> <fieldset class=\"form-group\" data-v-6ebd9c5f><input placeholder=\"Enter tags separated by ,\" type=\"text\""+(_vm._ssrAttr("value",(_vm.article.tagList)))+" class=\"form-control\" data-v-6ebd9c5f> <div class=\"tag-list\" data-v-6ebd9c5f></div></fieldset> <button type=\"button\" class=\"btn btn-lg pull-xs-right btn-primary\" data-v-6ebd9c5f>\n              Publish Article\n            </button></fieldset></form></div></div></div>")])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/editor/index.vue?vue&type=template&id=76631dea&scoped=true&
+// CONCATENATED MODULE: ./pages/editor/index.vue?vue&type=template&id=6ebd9c5f&scoped=true&
 
 // EXTERNAL MODULE: ./api/article.js
 var article = __webpack_require__(27);
@@ -148,7 +148,7 @@ var article = __webpack_require__(27);
       const status = this.isEmpty(this.article);
 
       if (!status) {
-        alert("请核实内容后在提交");
+        alert("请核实内容后再去提交");
         return false;
       }
 
@@ -192,7 +192,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "76631dea",
+  "6ebd9c5f",
   "dd07b12a"
   
 )
