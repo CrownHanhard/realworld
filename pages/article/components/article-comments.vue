@@ -2,11 +2,11 @@
   <div>
     <form class="card comment-form">
       <div class="card-block">
-        <textarea class="form-control" placeholder="Write a comment..." rows="3"></textarea>
+        <textarea v-model="comment.body" class="form-control" placeholder="Write a comment..." rows="3"></textarea>
       </div>
       <div class="card-footer">
-        <img src="http://i.imgur.com/Qr71crq.jpg" class="comment-author-img" />
-        <button class="btn btn-sm btn-primary">
+        <img :src="$store.state.image" class="comment-author-img" />
+        <button class="btn btn-sm btn-primary" @click="addNewComment">
         Post Comment
         </button>
       </div>
@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { getComments } from '@/api/article'
+import { getComments,addComments } from '@/api/article'
 
 export default {
   name: 'ArticleComments',
@@ -57,12 +57,30 @@ export default {
   },
   data () {
     return {
-      comments: [] // 文章列表
+      comments: [], // 文章列表
+      comment:{
+        body:''
+      }
     }
   },
   async mounted () {
     const { data } = await getComments(this.article.slug)
     this.comments = data.comments
+  },
+  methods:{
+  async addNewComment(){
+    const _data={
+      comment:this.comment
+    }
+    await addComments(this.article.slug,_data).then(()=>{
+      this.$router.push({
+        name: 'article',
+        params: {
+          slug: this.article.slug
+        }
+      })
+    })
+  }
   }
 }
 </script>

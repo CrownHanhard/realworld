@@ -1,51 +1,51 @@
 [
   {
     "path": "/",
-    "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\layouts",
+    "component": "D:\\\\realword\\\\pages\\\\layouts",
     "children": [
       {
         "path": "",
         "name": "home",
-        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\home",
-        "_name": "_a14caa14"
+        "component": "D:\\\\realword\\\\pages\\\\home",
+        "_name": "_269c8d0f"
       },
       {
         "path": "/login",
         "name": "login",
-        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\login",
-        "_name": "_3c13fc32"
+        "component": "D:\\\\realword\\\\pages\\\\login",
+        "_name": "_a5a5458e"
       },
       {
         "path": "/register",
         "name": "register",
-        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\login",
-        "_name": "_3c13fc32"
+        "component": "D:\\\\realword\\\\pages\\\\login",
+        "_name": "_a5a5458e"
       },
       {
         "path": "/profile/:username",
         "name": "profile",
-        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\profile",
-        "_name": "_602c8832"
+        "component": "D:\\\\realword\\\\pages\\\\profile",
+        "_name": "_1f1c790e"
       },
       {
         "path": "/settings",
         "name": "settings",
-        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\settings",
-        "_name": "_36a48eba"
+        "component": "D:\\\\realword\\\\pages\\\\settings",
+        "_name": "_a1f2875a"
       },
       {
         "path": "/editor",
         "name": "editor",
-        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\editor",
-        "_name": "_39dfadc4"
+        "component": "D:\\\\realword\\\\pages\\\\editor",
+        "_name": "_281b24c6"
       },
       {
         "path": "/article/:slug",
         "name": "article",
-        "component": "D:\\\\offer-study\\\\learning-stage-results\\\\part3\\\\fed-e-task-03-03\\\\project\\\\realworld-nuxtjs\\\\pages\\\\article",
-        "_name": "_46f6cb7f"
+        "component": "D:\\\\realword\\\\pages\\\\article",
+        "_name": "_5187f274"
       }
     ],
-    "_name": "_70226912"
+    "_name": "_0067a459"
   }
 ]

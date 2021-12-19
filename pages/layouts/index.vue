@@ -6,15 +6,17 @@
         <nuxt-link
             class="navbar-brand"
             to="/"
-        >Home</nuxt-link>
+        >Home
+        </nuxt-link>
         <ul class="nav navbar-nav pull-xs-right">
           <li class="nav-item">
             <!-- Add "active" class when you're on that page" -->
             <nuxt-link
                 class="nav-link"
-                to="/"
                 exact
-            >Home</nuxt-link>
+                to="/"
+            >Home
+            </nuxt-link>
           </li>
           <template v-if="user">
             <li class="nav-item">
@@ -34,13 +36,18 @@
               </nuxt-link>
             </li>
             <li class="nav-item">
-              <nuxt-link class="nav-link" to="/profile/123">
+              <nuxt-link class="nav-link" :to="{name:'profile',params:{username:user.username}}">
                 <img
-                    class="user-pic"
                     :src="user.image"
+                    class="user-pic"
                 >
                 {{ user.username }}
               </nuxt-link>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link" style="color:red;cursor: pointer" @click="outLogin">
+                Exit
+              </div>
             </li>
           </template>
 
@@ -61,6 +68,7 @@
                 Sign up
               </nuxt-link>
             </li>
+
           </template>
         </ul>
       </div>
@@ -74,7 +82,7 @@
     <!-- 底部 -->
     <footer>
       <div class="container">
-        <a href="/" class="logo-font">conduit</a>
+        <a class="logo-font" href="/">conduit</a>
         <span class="attribution">
           An interactive learning project from <a href="https://thinkster.io">Thinkster</a>. Code &amp; design licensed under MIT.
         </span>
@@ -85,12 +93,20 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import {mapState} from 'vuex'
 
+const Cookie = process.client ? require('js-cookie') : undefined
 export default {
   name: 'LayoutIndex',
   computed: {
     ...mapState(['user'])
+  },
+  methods: {
+    outLogin() {
+      Cookie.remove('user')
+      this.$store.commit("delUser")
+      this.$router.push('/')
+    }
   }
 }
 </script>

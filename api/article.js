@@ -17,7 +17,14 @@ export const getYourFeedArticles = params => {
     params,
   })
 }
-
+// 创建文章
+export const createArticles = data => {
+    return request({
+        method: 'GET',
+        url: '/api/articles',
+        data
+    })
+}
 // 添加点赞
 export const addFavorite = slug => {
   return request({
@@ -48,4 +55,12 @@ export const getComments = slug => {
     method: 'GET',
     url: `/api/articles/${slug}/comments`
   })
+}
+// 发表文章评论
+export const addComments = (slug,data) => {
+    return request({
+        method: 'POST',
+        url: `/api/articles/${slug}/comments`,
+        data
+    })
 }

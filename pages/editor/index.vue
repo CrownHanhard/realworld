@@ -3,22 +3,22 @@
     <div class="container page">
       <div class="row">
         <div class="col-md-10 offset-md-1 col-xs-12">
-          <form>
+          <form  @submit.prevent="onSubmit">
             <fieldset>
               <fieldset class="form-group">
-                <input class="form-control form-control-lg" placeholder="Article Title" type="text">
+                <input v-model="article.title"  class="form-control form-control-lg" placeholder="Article Title" type="text">
               </fieldset>
               <fieldset class="form-group">
-                <input class="form-control" placeholder="What's this article about?" type="text">
+                <input v-model="article.description"  class="form-control" placeholder="What's this article about?" type="text">
               </fieldset>
               <fieldset class="form-group">
-                <textarea class="form-control" placeholder="Write your article (in markdown)" rows="8"></textarea>
+                <textarea v-model="article.body"  class="form-control" placeholder="Write your article (in markdown)" rows="8"></textarea>
               </fieldset>
               <fieldset class="form-group">
-                <input class="form-control" placeholder="Enter tags" type="text">
+                <input v-model="article.tagList"  class="form-control" placeholder="Enter tags separated by ," type="text">
                 <div class="tag-list"></div>
               </fieldset>
-              <button class="btn btn-lg pull-xs-right btn-primary" type="button">
+              <button @click="onSubmit" class="btn btn-lg pull-xs-right btn-primary" type="button">
                 Publish Article
               </button>
             </fieldset>
@@ -30,9 +30,43 @@
 </template>
 
 <script>
+import {createArticles} from '@/api/article'
 export default {
   middleware:'authenticated',
-  name: "editorIndex"
+  name: "editorIndex",
+  data(){
+    return{
+      article:{
+        title:'',
+        description:'',
+        body:'',
+        tagList:''
+      }
+    }
+  },
+  methods:{
+   async onSubmit(){
+     const status= this.isEmpty(this.article)
+      if(!status){
+        alert("请核实内容后在提交")
+        return false;
+      }
+      const _data={
+        ...this.article,
+        tagList:this.article.tagList.split(",")
+      }
+      await createArticles(_data).then(()=>{
+        this.$router.push('/')
+      })
+   },
+    isEmpty(obj){
+      let res=1
+      Array.from(Object.entries(obj)).forEach((val)=>{
+        res&=!!val[1]
+      })
+      return !!res
+    }
+  }
 }
 </script>
 
