@@ -81,6 +81,7 @@ export default {
         alert("请核实内容后再去提交")
         return false;
       }
+
       const _data = {
         article: {
           ...this.article,
