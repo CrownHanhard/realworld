@@ -1,7 +1,6 @@
 module.exports = {
     plugins:['~/plugins/request.js','~/plugins/date.js'],
     router: {
-        // base:,
         linkActiveClass:'active',
         extendRoutes(route, resolve) {
             route.splice(0)
