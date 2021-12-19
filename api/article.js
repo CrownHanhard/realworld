@@ -8,7 +8,6 @@ export const getArticles = params => {
     params
   })
 }
-
 // 获取公共文章列表
 export const getYourFeedArticles = params => {
   return request({
@@ -48,7 +47,13 @@ export const getArticle = slug => {
     url: `/api/articles/${slug}`
   })
 }
-
+export const UpdateArticle = (slug,data) => {
+    return request({
+        method: 'PUT',
+        url: `/api/articles/${slug}`,
+        data
+    })
+}
 // 获取文章评论
 export const getComments = slug => {
   return request({

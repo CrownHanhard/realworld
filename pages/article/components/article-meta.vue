@@ -20,6 +20,7 @@
       <span class="date">{{ article.createdAt | date('MMM DD, YYYY') }}</span>
     </div>
     <button
+        v-if="article.author.username!==$store.state.user.username"
       class="btn btn-sm btn-outline-secondary"
       :class="{
         active: article.author.following
@@ -31,6 +32,7 @@
     </button>
     &nbsp;&nbsp;
     <button
+        v-if="article.author.username!==$store.state.user.username"
       class="btn btn-sm btn-outline-primary"
       :class="{
         active: article.favorited
@@ -40,6 +42,18 @@
       &nbsp;
       Favorite Post <span class="counter">(29)</span>
     </button>
+    <nuxt-link
+        v-if="article.author.username===$store.state.user.username"
+        class="btn btn-sm btn-outline-primary"
+        :to="{
+          name:'editor',
+          query:{
+            slug:article.slug
+          }
+        }"
+    >
+      Edit Article&nbsp;
+    </nuxt-link>
   </div>
 </template>
 
