@@ -61,7 +61,7 @@ export default {
     return {
       user: {
         username: '',
-        email: 'gh@163.com',
+        email: 'gm@163.com',
         password: '12345678'
       },
       errors: {} // 错误信息
