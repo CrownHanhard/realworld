@@ -48,7 +48,7 @@ export default {
    async onSubmit(){
      const status= this.isEmpty(this.article)
       if(!status){
-        alert("请核实内容后在提交")
+        alert("请核实内容后再提交")
         return false;
       }
       const _data={
